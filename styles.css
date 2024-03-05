@@ -1,0 +1,58 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Playfair Display", serif;
+  font-style: normal;
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, auto);
+    border: red 1px solid;
+}
+
+.header{
+    display: grid;
+ 
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header__logo{
+    width: 30%;
+}
+
+.header__list{
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+}
+
+.header__list-menu {
+    text-align: center;
+    color: #11204d;
+    border-bottom: 2px solid transparent; /* Borde inferior inicialmente transparente */
+    transition: color 0.8s, border-color 0.8s; /* Transiciones de color y borde durante 0.8 segundos con efecto ease */
+}
+
+.header__list-menu:hover {
+    color: purple; /* Color al hacer hover */
+    border-color: purple; /* Color del borde inferior al hacer hover */
+}
+
+.welcome{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.welcome__text{
+    font-size: 70px;
+}
