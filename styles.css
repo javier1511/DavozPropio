@@ -48,11 +48,86 @@
 }
 
 .welcome{
+    padding-top: 10px;
     border: 1px solid red;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+
 }
 
-.welcome__text{
-    font-size: 70px;
+
+.welcome__text-container{
+    width: 100%;
 }
+.welcome__text{
+    font-size: 50px;
+}
+
+.welcome__grid-container{
+    width: 100%;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    border: 1px solid red;
+   
+
+}
+
+.welcome__grid-container-picture{
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    overflow:hidden;
+    max-width: 100%;
+  
+}
+
+.welcome__picture-scroll{
+    display: flex;
+    padding-block:1rem;
+    display:flex;
+    animation: scroll linear 20s infinite;
+    gap: 1rem;
+    width: max-content;
+
+}
+
+
+
+
+.welcome__picture{
+    background: var(--clr-primary-400);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+    width:250px;
+ 
+
+}
+
+
+
+@keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+  .only{
+    width: 100%;
+    display: grid;
+    border: 1px solid red;
+    grid-template-columns: 80% 20%;
+  }
+
+  .only_text-container{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .only__logo-picture{
+    width: 50%;
+  }
+
+  .welcome_-text-span{
+    color: purple;
+  }
