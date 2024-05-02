@@ -51,3 +51,42 @@ const offerDataGatherInfoAction1 = document.querySelector("#offer__titles-text1"
 offerDataGatherInfoAction1.addEventListener("click", () => {
     offerDataReplace(offerData[0]);
 });
+
+const modal = document.querySelector(".modal");
+const modalPicture = document.querySelector(".modal__picture");
+
+const openModal = function(event) {
+    const clickedImgSrc = event.target.src;
+    modalPicture.src = clickedImgSrc;
+    modal.classList.add("modal__opened");
+}
+
+
+
+const galleryPictures = document.querySelectorAll(".gallery__container-picture");
+galleryPictures.forEach(function(picture) {
+    picture.addEventListener("click", openModal);
+});
+
+
+const closeModal = function(){
+    modal.classList.remove("modal__opened");
+
+}
+
+const closeButton = document.querySelector(".modal__content-close");
+
+closeButton.addEventListener("click", closeModal);
+
+window.addEventListener("click", function(event){
+    if(event.target === modal){
+        closeModal();
+    }
+})
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeModal();
+    }
+});
+
